@@ -85,27 +85,6 @@
         });
 
         </script>
-
-        <script>
-        function atualizarData() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    var data = JSON.parse(this.responseText);
-                    document.getElementById("anos").innerHTML = data.anos;
-                    document.getElementById("meses").innerHTML = data.meses;
-                    document.getElementById("dias").innerHTML = data.dias;
-                    document.getElementById("horas").innerHTML = data.horas;
-                    document.getElementById("minutos").innerHTML = data.minutos;
-                    document.getElementById("segundos").innerHTML = data.segundos;
-                }
-            };
-            xhttp.open("GET", "index.php", true);
-            xhttp.send();
-        }
-
-        atualizarData(); // Atualiza a data imediatamente
-        setInterval(atualizarData, 1000); // Atualiza a data a cada segundo
-        </script>
+        
 </body>
 </html>
